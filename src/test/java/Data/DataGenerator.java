@@ -27,7 +27,7 @@ public class DataGenerator {
     }
 
     private static void sendRequest(RegistrationDto user) {
-                given() // "дано"
+        given() // "дано"
                 .spec(requestSpec) // указываем, какую спецификацию используем
                 .body(user) // передаём в теле объект, который будет преобразован в JSON
                 .when() // "когда"
@@ -37,12 +37,12 @@ public class DataGenerator {
     }
 
     public static String getRandomLogin() {
-              var login = faker.name().firstName();
+        var login = faker.name().firstName();
         return login;
     }
 
     public static String getRandomPassword() {
-               var password = faker.internet().password();
+        var password = faker.internet().password();
         return password;
     }
 
@@ -51,7 +51,7 @@ public class DataGenerator {
         }
 
         public static RegistrationDto getUser(String status) {
-           var user = new RegistrationDto (getRandomLogin(),getRandomPassword(), status);
+            var user = new RegistrationDto(getRandomLogin(), getRandomPassword(), status);
             return user;
         }
 

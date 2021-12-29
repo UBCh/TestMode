@@ -69,9 +69,9 @@ public class AuthTest {
 
     @Test
     @DisplayName("Should get error message if login with wrong login")
-     void shouldGetErrorIfWrongLogin() {
-    var registeredUser = getRegisteredUser("active");
-    var wrongLogin = getRandomLogin();
+    void shouldGetErrorIfWrongLogin() {
+        var registeredUser = getRegisteredUser("active");
+        var wrongLogin = getRandomLogin();
         given()
                 .body(registeredUser)
                 .when()
@@ -81,13 +81,13 @@ public class AuthTest {
         $(".input_type_text").setValue(wrongLogin);
         $(".notification__content").shouldBe(visible)
                 .shouldHave(exactText("Неверно указан логин или пароль"));
-            }
+    }
 
     @Test
     @DisplayName("Should get error message if login with wrong password")
     void shouldGetErrorIfWrongPassword() {
-    var registeredUser = getRegisteredUser("active");
-    var wrongPassword = getRandomPassword();
+        var registeredUser = getRegisteredUser("active");
+        var wrongPassword = getRandomPassword();
         given()
                 .body(registeredUser)
                 .when()
