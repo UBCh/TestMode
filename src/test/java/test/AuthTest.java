@@ -1,13 +1,13 @@
-package Test;
+package test;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 
-import static Data.DataGenerator.Registration.getRegisteredUser;
-import static Data.DataGenerator.getRandomLogin;
-import static Data.DataGenerator.getRandomPassword;
+import static data.DataGenerator.Registration.getRegisteredUser;
+import static data.DataGenerator.getRandomLogin;
+import static data.DataGenerator.getRandomPassword;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.withText;
