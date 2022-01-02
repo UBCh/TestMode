@@ -26,6 +26,7 @@ dependencies {
 }
 
 test {
+    systemProperty 'selenide.headless', System.getProperty('selenide.headless')
     useJUnitPlatform()
     testLogging { events "passed", "skipped", "failed" }
 }
